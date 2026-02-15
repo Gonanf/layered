@@ -8,17 +8,19 @@ public class TortaService {
 		return new TortaInfo("amogo",300,new IngredientInfo[0]);
 	}
 	public static TortaInfo[] getAll(){ 
-		return new TortaInfo[]
+		TortaInfo[] tortas = new TortaInfo[]
 		{
 			new TortaInfo(
-					"amoga",
+					new String("amoga"),
 					1000,
 					new IngredientInfo[]
 					{
-						new IngredientInfo("aguas",200)
+						new IngredientInfo(new String("aguas"),200)
 					}
 				     )
 		};
+		System.out.println(tortas[0].name);
+		return tortas;
 	}
 	public static TortaInfo[] getByName(String name){
 		return new TortaInfo[5];

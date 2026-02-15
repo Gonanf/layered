@@ -1,12 +1,12 @@
 package app.src.main.chaos.layered;
 
 public class IngredientInfo {
-	String name;
-	int quantity;
+	public String name;
+	public int quantity;
 
 	// @ConstructorParameters({"name","quantity"})
-	public IngredientInfo(String name,int quantity){
-	name = name;
-	quantity = quantity;
+	public IngredientInfo(String cname,int cquantity){
+	name = cname;
+	quantity = cquantity;
 	}
 }

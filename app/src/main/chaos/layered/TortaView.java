@@ -12,14 +12,16 @@ public class TortaView {
 	public static String renderAll(){
 		String response = new String("<table><tr><td>Nombre</td><td>Precio</td><td>Ingredientes</td></tr>");
 		TortaInfo[] tortas = TortaService.getAll();
+		System.out.println(response);
 		for(TortaInfo torta : tortas)
 		{
+			System.out.println("Torta: " + torta.name);
+
 			response += "<tr><td>"+torta.name+"</td><td>"+torta.price+"</td><td>";
 				for (IngredientInfo ingredient : torta.ingredients) {
-				response += "- " + ingredient.name + " (" + ingredient.quantity + "u)\n";
+				response += "- " + ingredient.name + " (" + ingredient.quantity + "u)<br/>";
 				}
-			response += "</td></tr>";
-
+			response += "</td></tr></table>";
 		}
 		return response;
 
