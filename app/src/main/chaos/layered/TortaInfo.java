@@ -3,14 +3,12 @@ import app.src.main.chaos.layered.IngredientInfo;
 
 
 public class TortaInfo {
-	private:
 	IngredientInfo ingredients[];
 	String name;
 	float price;
 
-	public:
-	@ContructorParameters({"name","price","ingredients"})
-	TortaInfo(String name,float price, IngredientInfo[] ingredients){
+	// @ContructorParameters({"name","price","ingredients"})
+	public TortaInfo(String name,float price, IngredientInfo[] ingredients){
 		name = name;
 		price = price;
 		ingredients = ingredients;
